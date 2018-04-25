@@ -1,9 +1,13 @@
 make model:
-python  tensorflow-master/tensorflow/examples/speech_commands/freeze.py \ --start_checkpoint=/tmp/speech_commands_train/conv.ckpt-18000 \ --output_file=/tmp/my_frozen_graph.pb
+
+
+python  tensorflow-master/tensorflow/examples/speech_commands/train.py \ --train_dir=/skripsi2/speech_commands_train \ --data_dir=/skripsi/ \ --data_url= \ --wanted_words=alloy,argon,aspal,atlas,banjir,bank,basin,benua,bigbang,bise,blackhole,bumi,dam,danau,debris,debu,delta,embun,era,es,fauna,fosil,front,fungi,geyser,granit,gua,gunung,gurun,horst,humus,jurang,kabut,kanal,kawah,knot,komet,kompas,lahar,lalang,laut,magma,magnet,menhir,orbit,palung,pulau,semen,tanjung,teluk
 
 
 python  tensorflow-master/tensorflow/examples/speech_commands/train.py \ --train_dir=/skripsi/speech_commands_train \ --data_url= \ --wanted_words=alloy,argon,aspal,atlas,banjir,bank,basin,benua,bigbang,bise,blackhole,bumi,dam,danau,debris,debu,delta,embun,era,es,fauna,fosil,front,fungi,geyser,granit,gua,gunung,gurun,horst,humus,jurang,kabut,kanal,kawah,knot,komet,kompas,lahar,lalang,laut,magma,magnet,menhir,orbit,palung,pulau,semen,tanjung,teluk
 
+freeze model:
+python  tensorflow-master/tensorflow/examples/speech_commands/freeze.py \ --start_checkpoint=/tmp/speech_commands_train/conv.ckpt-18000 \ --output_file=/tmp/my_frozen_graph.pb
 
 
 python  tensorflow-master/tensorflow/examples/speech_commands/freeze.py \ --start_checkpoint=/skripsi/speech_commands_train/conv.ckpt-18000 \ --output_file=/skripsi/my_frozen_graph.pb \ --wanted_words=alloy,argon,aspal,atlas,banjir,bank,basin,benua,bigbang,bise,blackhole,bumi,dam,danau,debris,debu,delta,embun,era,es,fauna,fosil,front,fungi,geyser,granit,gua,gunung,gurun,horst,humus,jurang,kabut,kanal,kawah,knot,komet,kompas,lahar,lalang,laut,magma,magnet,menhir,orbit,palung,pulau,semen,tanjung,teluk
